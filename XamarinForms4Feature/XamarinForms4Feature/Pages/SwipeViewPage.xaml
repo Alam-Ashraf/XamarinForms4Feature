@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms4Feature.Pages.SwipeViewPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="SwipeView Page"
+    BackgroundColor="Transparent"
+    mc:Ignorable="d">
+
+
+    <ContentPage.Content>
+
+        <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+
+            <StackLayout Padding="15" HorizontalOptions="FillAndExpand">
+
+
+                <!--  Swipe From Top to See User Detail  -->
+                <SwipeView>
+
+                    <!--  Top Item  -->
+                    <SwipeView.TopItems>
+                        <SwipeItems Mode="Reveal">
+                            <SwipeItemView>
+
+                                <StackLayout>
+
+                                    <Frame
+                                        Margin="-15,-15,-15,120"
+                                        BackgroundColor="#EC7063"
+                                        CornerRadius="50"
+                                        HasShadow="True"
+                                        HeightRequest="150">
+
+                                        <StackLayout Orientation="Vertical" Spacing="5">
+
+                                            <Image
+                                                HeightRequest="80"
+                                                HorizontalOptions="CenterAndExpand"
+                                                Source="user"
+                                                WidthRequest="80" />
+
+                                            <Label
+                                                FontAttributes="Bold"
+                                                FontSize="18"
+                                                HorizontalOptions="CenterAndExpand"
+                                                Text="Alamgeer Ashraf"
+                                                TextColor="White" />
+
+                                            <Label
+                                                FontAttributes="Bold"
+                                                FontSize="16"
+                                                HorizontalOptions="CenterAndExpand"
+                                                Text="Xamarin Forms Developer"
+                                                TextColor="White" />
+
+                                        </StackLayout>
+                                    </Frame>
+
+                                </StackLayout>
+
+                            </SwipeItemView>
+                        </SwipeItems>
+                    </SwipeView.TopItems>
+
+                    <SwipeView.Content>
+
+                        <StackLayout
+                            BackgroundColor="White"
+                            HeightRequest="200"
+                            Orientation="Vertical">
+
+                            <Image
+                                HeightRequest="60"
+                                HorizontalOptions="CenterAndExpand"
+                                Source="down_arrow.png"
+                                VerticalOptions="CenterAndExpand" />
+
+                            <Label
+                                FontSize="18"
+                                HorizontalOptions="CenterAndExpand"
+                                Text="Swipe to see user detail."
+                                VerticalOptions="CenterAndExpand" />
+
+                        </StackLayout>
+
+                    </SwipeView.Content>
+
+                </SwipeView>
+
+
+                <Frame
+                    Padding="10"
+                    BorderColor="{StaticResource ColorPrimary}"
+                    CornerRadius="20">
+
+                    <StackLayout Spacing="10">
+
+                        <!--  Swipe From Left  -->
+                        <SwipeView>
+                            <SwipeView.LeftItems>
+                                <SwipeItems Mode="Reveal">
+                                    <SwipeItem
+                                        BackgroundColor="White"
+                                        IconImageSource="delete1.png"
+                                        Invoked="OnFacebookClick"
+                                        Text="Delete" />
+
+                                    <SwipeItem
+                                        BackgroundColor="White"
+                                        IconImageSource="favorite.png"
+                                        Invoked="OnLinkedinClick"
+                                        Text="Favorite" />
+                                </SwipeItems>
+                            </SwipeView.LeftItems>
+
+                            <SwipeView.Content>
+                                <Frame
+                                    Margin="10"
+                                    Padding="0"
+                                    BackgroundColor="#4233A2"
+                                    CornerRadius="10">
+
+                                    <StackLayout HeightRequest="100">
+
+                                        <Label
+                                            FontSize="18"
+                                            HorizontalOptions="CenterAndExpand"
+                                            Text="Swipe From Left"
+                                            TextColor="White"
+                                            VerticalOptions="CenterAndExpand" />
+
+                                    </StackLayout>
+
+                                </Frame>
+                            </SwipeView.Content>
+                        </SwipeView>
+
+                        <!--  Swipe From Right  -->
+                        <SwipeView>
+                            <SwipeView.RightItems>
+                                <SwipeItems Mode="Reveal">
+                                    <SwipeItem
+                                        BackgroundColor="White"
+                                        IconImageSource="delete1.png"
+                                        Invoked="OnFacebookClick"
+                                        Text="Delete" />
+
+                                    <SwipeItem
+                                        BackgroundColor="White"
+                                        IconImageSource="favorite.png"
+                                        Invoked="OnLinkedinClick"
+                                        Text="Favorite" />
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+
+                            <SwipeView.Content>
+                                <Frame
+                                    Margin="10"
+                                    Padding="0"
+                                    BackgroundColor="#CC9900"
+                                    CornerRadius="10">
+
+                                    <StackLayout HeightRequest="100">
+
+                                        <Label
+                                            FontSize="18"
+                                            HorizontalOptions="CenterAndExpand"
+                                            Text="Swipe From Right"
+                                            TextColor="White"
+                                            VerticalOptions="CenterAndExpand" />
+
+                                    </StackLayout>
+
+                                </Frame>
+                            </SwipeView.Content>
+                        </SwipeView>
+
+                        <!--  Swipe From Down  -->
+                        <SwipeView>
+                            <SwipeView.BottomItems>
+                                <SwipeItems Mode="Execute">
+                                    <SwipeItem
+                                        BackgroundColor="White"
+                                        IconImageSource="delete1.png"
+                                        Invoked="OnFacebookClick"
+                                        Text="Delete" />
+
+                                    <SwipeItem
+                                        BackgroundColor="White"
+                                        IconImageSource="favorite.png"
+                                        Invoked="OnLinkedinClick"
+                                        Text="Favorite" />
+                                </SwipeItems>
+                            </SwipeView.BottomItems>
+
+                            <SwipeView.Content>
+                                <Frame
+                                    Margin="10"
+                                    Padding="0"
+                                    BackgroundColor="{StaticResource ColorGreen}"
+                                    CornerRadius="10">
+
+                                    <StackLayout HeightRequest="100">
+
+                                        <Label
+                                            FontSize="18"
+                                            HorizontalOptions="CenterAndExpand"
+                                            Text="Swipe From Down"
+                                            TextColor="White"
+                                            VerticalOptions="CenterAndExpand" />
+
+                                    </StackLayout>
+
+                                </Frame>
+                            </SwipeView.Content>
+                        </SwipeView>
+
+                        <!--  Swipe From Top  -->
+                        <SwipeView>
+                            <SwipeView.TopItems>
+                                <SwipeItems Mode="Execute">
+                                    <SwipeItem
+                                        BackgroundColor="White"
+                                        IconImageSource="delete1.png"
+                                        Invoked="OnFacebookClick"
+                                        Text="Delete" />
+
+                                    <SwipeItem
+                                        BackgroundColor="White"
+                                        IconImageSource="favorite.png"
+                                        Invoked="OnLinkedinClick"
+                                        Text="Favorite" />
+                                </SwipeItems>
+                            </SwipeView.TopItems>
+
+                            <SwipeView.Content>
+                                <Frame
+                                    Margin="10"
+                                    Padding="0"
+                                    BackgroundColor="{StaticResource ColorMedium}"
+                                    CornerRadius="10">
+
+                                    <StackLayout HeightRequest="100">
+
+                                        <Label
+                                            FontSize="18"
+                                            HorizontalOptions="CenterAndExpand"
+                                            Text="Swipe From Top"
+                                            TextColor="White"
+                                            VerticalOptions="CenterAndExpand" />
+
+                                    </StackLayout>
+
+                                </Frame>
+                            </SwipeView.Content>
+                        </SwipeView>
+
+                        <!--  Swipe Custom  -->
+                        <SwipeView>
+
+                            <!--  Left Item  -->
+                            <SwipeView.LeftItems>
+                                <SwipeItems Mode="Reveal">
+                                    <SwipeItemView BackgroundColor="Red">
+
+                                        <StackLayout Orientation="Horizontal" Spacing="0">
+
+                                            <!--  1st Item  -->
+                                            <StackLayout
+                                                BackgroundColor="#FF4040"
+                                                HorizontalOptions="FillAndExpand"
+                                                Spacing="0"
+                                                VerticalOptions="FillAndExpand"
+                                                WidthRequest="100">
+
+                                                <Image
+                                                    HorizontalOptions="FillAndExpand"
+                                                    Source="delete1"
+                                                    VerticalOptions="CenterAndExpand" />
+                                            </StackLayout>
+
+                                            <!--  2nd Item  -->
+                                            <StackLayout
+                                                BackgroundColor="#30B1F5"
+                                                HorizontalOptions="FillAndExpand"
+                                                Spacing="0"
+                                                VerticalOptions="FillAndExpand"
+                                                WidthRequest="100">
+
+                                                <Image
+                                                    HorizontalOptions="FillAndExpand"
+                                                    Source="favorite"
+                                                    VerticalOptions="CenterAndExpand" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </SwipeItemView>
+                                </SwipeItems>
+                            </SwipeView.LeftItems>
+
+                            <!--  Right Item  -->
+                            <SwipeView.RightItems>
+                                <SwipeItems Mode="Reveal">
+                                    <SwipeItemView BackgroundColor="Red">
+
+                                        <StackLayout Orientation="Horizontal" Spacing="0">
+
+                                            <!--  1st Item  -->
+                                            <StackLayout
+                                                BackgroundColor="#3A559F"
+                                                HorizontalOptions="FillAndExpand"
+                                                Spacing="0"
+                                                VerticalOptions="FillAndExpand"
+                                                WidthRequest="100">
+
+                                                <Image
+                                                    HorizontalOptions="FillAndExpand"
+                                                    Source="facebook"
+                                                    VerticalOptions="CenterAndExpand" />
+                                            </StackLayout>
+
+                                            <!--  2nd Item  -->
+                                            <StackLayout
+                                                BackgroundColor="#4376B1"
+                                                HorizontalOptions="FillAndExpand"
+                                                Spacing="0"
+                                                VerticalOptions="FillAndExpand"
+                                                WidthRequest="100">
+
+                                                <Image
+                                                    HorizontalOptions="FillAndExpand"
+                                                    Source="linkedin"
+                                                    VerticalOptions="CenterAndExpand" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </SwipeItemView>
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+
+                            <SwipeView.Content>
+                                <Frame
+                                    Margin="10"
+                                    Padding="0"
+                                    BackgroundColor="#FF3333"
+                                    CornerRadius="10">
+
+                                    <StackLayout HeightRequest="100">
+
+                                        <Label
+                                            FontSize="18"
+                                            HorizontalOptions="CenterAndExpand"
+                                            Text="Swipe From Left/Right (Custom View)"
+                                            TextColor="White"
+                                            VerticalOptions="CenterAndExpand" />
+
+                                    </StackLayout>
+
+                                </Frame>
+                            </SwipeView.Content>
+
+                        </SwipeView>
+
+                    </StackLayout>
+
+                </Frame>
+
+                <!--  Swipe From Left to See User Detail  -->
+                <SwipeView>
+
+                    <!--  Left Item  -->
+                    <SwipeView.LeftItems>
+                        <SwipeItems Mode="Reveal">
+                            <SwipeItemView>
+
+                                <StackLayout>
+
+                                    <Frame
+                                        Margin="0,0,10,0"
+                                        BackgroundColor="Gray"
+                                        CornerRadius="20"
+                                        HasShadow="True"
+                                        HeightRequest="180">
+
+                                        <StackLayout Orientation="Vertical" Spacing="5">
+
+                                            <Image
+                                                HeightRequest="80"
+                                                HorizontalOptions="CenterAndExpand"
+                                                Source="user"
+                                                WidthRequest="80" />
+
+                                            <Label
+                                                FontAttributes="Bold"
+                                                FontSize="18"
+                                                HorizontalOptions="CenterAndExpand"
+                                                Text="Alamgeer Ashraf"
+                                                TextColor="White" />
+
+                                            <Label
+                                                FontAttributes="Bold"
+                                                FontSize="16"
+                                                HorizontalOptions="CenterAndExpand"
+                                                Text="Xamarin Forms Developer"
+                                                TextColor="White" />
+
+                                        </StackLayout>
+                                    </Frame>
+
+                                </StackLayout>
+                            </SwipeItemView>
+                        </SwipeItems>
+                    </SwipeView.LeftItems>
+
+                    <SwipeView.Content>
+
+
+                        <StackLayout
+                            BackgroundColor="White"
+                            HeightRequest="200"
+                            Orientation="Horizontal">
+
+                            <Image
+                                HeightRequest="60"
+                                HorizontalOptions="Start"
+                                Source="right_arrow.png"
+                                VerticalOptions="CenterAndExpand" />
+
+                            <Label
+                                FontSize="18"
+                                Text="Swipe to see user detail."
+                                VerticalOptions="CenterAndExpand" />
+
+                        </StackLayout>
+
+                    </SwipeView.Content>
+
+                </SwipeView>
+
+
+            </StackLayout>
+
+
+
+
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="XamarinForms4Feature.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Application.Resources>
+
+        <ResourceDictionary>
+
+            <!--  Font Size  -->
+            <x:Double x:Key="Font8">8</x:Double>
+            <x:Double x:Key="Font10">10</x:Double>
+            <x:Double x:Key="Font12">12</x:Double>
+            <x:Double x:Key="Font14">14</x:Double>
+            <x:Double x:Key="Font16">16</x:Double>
+            <x:Double x:Key="Font18">18</x:Double>
+            <x:Double x:Key="Font20">20</x:Double>
+            <x:Double x:Key="Font22">22</x:Double>
+            <x:Double x:Key="Font24">24</x:Double>
+            <x:Double x:Key="Font26">26</x:Double>
+            <x:Double x:Key="Font28">28</x:Double>
+            <x:Double x:Key="Font30">30</x:Double>
+            <x:Double x:Key="Font32">32</x:Double>
+            <x:Double x:Key="Font34">34</x:Double>
+            <x:Double x:Key="Font36">36</x:Double>
+            <x:Double x:Key="Font38">38</x:Double>
+            <x:Double x:Key="Font40">40</x:Double>
+
+
+            <!--  Color  -->
+            <!--<Color x:Key="ColorPrimary">#6a0dad</Color>-->
+            <Color x:Key="ColorPrimary">#99A3A4</Color>
+            <Color x:Key="ColorOrange">#EF963E</Color>
+            <Color x:Key="ColorGreen">#4CAE61</Color>
+            <Color x:Key="ColorSilver">#E6E6E6</Color>
+            <Color x:Key="ColorGray">#979797</Color>
+            <Color x:Key="ColorNavyBlue">#1A3163</Color>
+            <Color x:Key="ColorBlack">#000000</Color>
+            <Color x:Key="ColorWhite">#FFFFFF</Color>
+            <Color x:Key="ColorRed">#FF0000</Color>
+            <Color x:Key="ColorTransparent">Transparent</Color>
+            <Color x:Key="ColorFocused">#1ABC9C</Color>
+            <Color x:Key="ColorDisabled">#D7DBDD</Color>
+
+            <Color x:Key="ColorWeak">#E67E22</Color>
+            <Color x:Key="ColorMedium">#7D3C98</Color>
+            <Color x:Key="ColorStrong">#239B56</Color>
+
+            <Style TargetType="NavigationPage">
+                <!--  Doesn't change anything!  -->
+                <Setter Property="BarBackgroundColor" Value="{StaticResource ColorPrimary}" />
+                <Setter Property="BarTextColor" Value="{StaticResource ColorWhite}" />
+            </Style>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+
+
+</Application>

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<StackLayout
+    x:Class="XamarinForms4Feature.Pages.Common.CollectionViewItem"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackLayout
+        BackgroundColor="White"
+        HorizontalOptions="FillAndExpand"
+        IsClippedToBounds="True"
+        Spacing="0"
+        VerticalOptions="FillAndExpand">
+
+        <Frame
+            x:Name="FrameContainer"
+            Margin="3"
+            Padding="0,0,0,10"
+            BackgroundColor="{StaticResource ColorWhite}"
+            BorderColor="{StaticResource ColorPrimary}"
+            CornerRadius="0"
+            HasShadow="True"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
+                IsClippedToBounds="True"
+                Orientation="Vertical"
+                Spacing="0"
+                VerticalOptions="FillAndExpand">
+
+                <BoxView
+                    BackgroundColor="{Binding HeaderColor}"
+                    HeightRequest="60"
+                    HorizontalOptions="FillAndExpand" />
+
+                <!--  Banner Image  -->
+                <Frame
+                    Margin="0,-40,0,0"
+                    Padding="0"
+                    BackgroundColor="Transparent"
+                    BorderColor="{StaticResource ColorWhite}"
+                    CornerRadius="50"
+                    HasShadow="True"
+                    HeightRequest="100"
+                    HorizontalOptions="CenterAndExpand"
+                    IsClippedToBounds="True"
+                    VerticalOptions="Start"
+                    WidthRequest="100">
+
+
+                    <Grid>
+
+                        <Image
+                            x:Name="BannerImage"
+                            Aspect="AspectFill"
+                            HeightRequest="99"
+                            IsAnimationPlaying="True"
+                            IsVisible="{Binding IsLoading}"
+                            Source="{Binding ImageUrl}"
+                            WidthRequest="99">
+
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageClick" />
+                            </Image.GestureRecognizers>
+
+                        </Image>
+
+                        <ActivityIndicator
+                            BindingContext="{x:Reference Name=BannerImage}"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            IsRunning="True"
+                            IsVisible="{Binding IsLoading}"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30"
+                            Color="{StaticResource ColorPrimary}" />
+
+                    </Grid>
+
+                </Frame>
+
+                <StackLayout Margin="0,10,0,0">
+
+                    <Label
+                        FontSize="16"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding ImageName}"
+                        TextColor="{StaticResource ColorBlack}" />
+
+                </StackLayout>
+
+            </StackLayout>
+
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnItemClick" />
+            </Frame.GestureRecognizers>
+
+        </Frame>
+
+
+
+
+    </StackLayout>
+
+</StackLayout>

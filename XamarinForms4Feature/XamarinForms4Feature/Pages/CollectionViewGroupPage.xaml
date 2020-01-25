@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms4Feature.Pages.CollectionViewGroupPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:collectionItem="clr-namespace:XamarinForms4Feature.Pages.Common"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:XamarinForms4Feature.ViewModel"
+    Title="CollectionView Group"
+    mc:Ignorable="d">
+
+    <ContentPage.BindingContext>
+        <viewModels:CollectionViewPageViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <CollectionView
+                x:Name="BannerList"
+                Margin="0,2,0,0"
+                BackgroundColor="{StaticResource ColorPrimary}"
+                IsGrouped="True"
+                ItemSizingStrategy="MeasureAllItems"
+                ItemsSource="{Binding ImageList7}"
+                SelectionMode="None">
+
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="1" Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+
+                    <DataTemplate>
+                        <collectionItem:CollectionViewItem2 />
+                    </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+
+                <CollectionView.GroupHeaderTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10,20,10,20" BackgroundColor="{StaticResource ColorPrimary}">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="16"
+                                Text="{Binding BannerHeader}"
+                                TextColor="White"
+                                VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.GroupHeaderTemplate>
+
+                <CollectionView.GroupFooterTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10,20,10,20" BackgroundColor="LightGreen">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="16"
+                                Text="{Binding BannerFooter}"
+                                TextColor="White"
+                                VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.GroupFooterTemplate>
+
+
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

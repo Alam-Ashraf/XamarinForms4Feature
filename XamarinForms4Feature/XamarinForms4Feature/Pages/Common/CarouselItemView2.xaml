@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<StackLayout
+    x:Class="XamarinForms4Feature.Pages.Common.CarouselItemView2"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Frame
+        x:Name="FrameContainer"
+        Margin="10"
+        Padding="0"
+        CornerRadius="20"
+        HasShadow="True"
+        HeightRequest="220"
+        IsClippedToBounds="True">
+
+        <Grid>
+
+            <Image
+                x:Name="BannerImage"
+                Aspect="AspectFill"
+                IsVisible="{Binding IsLoading}"
+                Source="{Binding ImageUrl}" />
+
+            <ActivityIndicator
+                Margin="0,-20,0,0"
+                BindingContext="{x:Reference Name=BannerImage}"
+                HeightRequest="40"
+                HorizontalOptions="CenterAndExpand"
+                IsRunning="True"
+                IsVisible="{Binding IsLoading}"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="40"
+                Color="{StaticResource ColorPrimary}" />
+
+            <StackLayout
+                BackgroundColor="#55000000"
+                HeightRequest="40"
+                VerticalOptions="EndAndExpand">
+
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="14"
+                    HorizontalOptions="CenterAndExpand"
+                    LineBreakMode="TailTruncation"
+                    Text="{Binding ImageName}"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" />
+
+            </StackLayout>
+
+        </Grid>
+
+    </Frame>
+
+</StackLayout>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<StackLayout
+    x:Class="XamarinForms4Feature.Pages.Common.CollectionViewItem3"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Frame
+        x:Name="FrameContainer"
+        Margin="10,5,10,5"
+        Padding="0"
+        BackgroundColor="{Binding HeaderColor}"
+        BorderColor="{StaticResource ColorWhite}"
+        CornerRadius="30"
+        IsClippedToBounds="True">
+
+        <Grid
+            x:Name="GridContainer"
+            Padding="10"
+            BackgroundColor="Transparent">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="7*" />
+            </Grid.ColumnDefinitions>
+
+            <!--  Banner Image  -->
+            <Frame
+                Padding="0"
+                BackgroundColor="Transparent"
+                BorderColor="{StaticResource ColorWhite}"
+                CornerRadius="50"
+                HasShadow="True"
+                HeightRequest="100"
+                HorizontalOptions="CenterAndExpand"
+                IsClippedToBounds="True"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="100">
+
+                <Grid BackgroundColor="Transparent">
+
+                    <Image
+                        x:Name="BannerImage"
+                        Aspect="AspectFill"
+                        HeightRequest="99"
+                        IsAnimationPlaying="True"
+                        IsVisible="{Binding IsLoading}"
+                        Source="{Binding ImageUrl}"
+                        WidthRequest="99">
+
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnImageClick" />
+                        </Image.GestureRecognizers>
+
+                    </Image>
+
+                    <ActivityIndicator
+                        BindingContext="{x:Reference Name=BannerImage}"
+                        HeightRequest="30"
+                        HorizontalOptions="CenterAndExpand"
+                        IsRunning="True"
+                        IsVisible="{Binding IsLoading}"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="30"
+                        Color="{StaticResource ColorWhite}" />
+                </Grid>
+
+            </Frame>
+
+            <StackLayout
+                Grid.Column="1"
+                BackgroundColor="Transparent"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="CenterAndExpand">
+
+                <Label
+                    FontSize="16"
+                    Text="{Binding ImageName}"
+                    TextColor="{StaticResource ColorBlack}" />
+
+                <Label
+                    FontSize="14"
+                    Text="{Binding ImageDesc}"
+                    TextColor="White" />
+
+            </StackLayout>
+
+
+        </Grid>
+
+        <Frame.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnItemClick" />
+        </Frame.GestureRecognizers>
+
+
+    </Frame>
+
+
+</StackLayout>

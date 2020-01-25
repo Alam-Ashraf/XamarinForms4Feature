@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms4Feature.Pages.GifPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Image with Gif"
+    mc:Ignorable="d">
+
+
+    <ContentPage.Content>
+
+        <ScrollView Padding="0,0,0,20">
+
+            <StackLayout>
+
+                <Image
+                    Aspect="AspectFit"
+                    IsAnimationPlaying="True"
+                    Source="gif1" />
+
+                <Image
+                    Aspect="AspectFit"
+                    IsAnimationPlaying="True"
+                    Source="gif2" />
+
+                <Image
+                    Aspect="AspectFit"
+                    IsAnimationPlaying="True"
+                    Source="gif3" />
+
+                <Image
+                    Aspect="AspectFit"
+                    IsAnimationPlaying="True"
+                    Source="gif4" />
+
+                <Image
+                    Aspect="AspectFit"
+                    IsAnimationPlaying="True"
+                    Source="gif5" />
+
+                <Image
+                    Aspect="AspectFit"
+                    IsAnimationPlaying="True"
+                    Source="gif6" />
+
+                <Image
+                    Aspect="AspectFit"
+                    IsAnimationPlaying="True"
+                    Source="gif7" />
+
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

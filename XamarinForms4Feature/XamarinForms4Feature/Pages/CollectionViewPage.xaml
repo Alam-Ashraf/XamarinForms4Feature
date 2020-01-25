@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms4Feature.Pages.CollectionViewPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:collectionItem="clr-namespace:XamarinForms4Feature.Pages.Common"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:XamarinForms4Feature.ViewModel"
+    x:Name="CollectionPage"
+    Title="CollectionView Page"
+    mc:Ignorable="d">
+
+    <ContentPage.BindingContext>
+        <viewModels:CollectionViewPageViewModel />
+    </ContentPage.BindingContext>
+
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <CollectionView
+                x:Name="BannerList"
+                BackgroundColor="{StaticResource ColorPrimary}"
+                ItemSizingStrategy="MeasureFirstItem"
+                ItemsSource="{Binding ImageList2}"
+                SelectionMode="None">
+
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="1" Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <collectionItem:CollectionViewItem2 />
+
+                    </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
