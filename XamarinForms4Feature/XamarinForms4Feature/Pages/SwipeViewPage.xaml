@@ -12,9 +12,6 @@
 
     <ContentPage.Content>
 
-        <!--<ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">-->
-
-
         <StackLayout Padding="15" HorizontalOptions="FillAndExpand">
 
             <!--  Swipe From Top to See User Detail  -->
@@ -365,87 +362,7 @@
 
             </Frame>
 
-            <!--  Swipe From Left to See User Detail  -->
-            <!--<SwipeView>
-
-            -->
-            <!--  Left Item  -->
-            <!--
-                <SwipeView.LeftItems>
-                    <SwipeItems Mode="Reveal">
-                        <SwipeItemView>
-
-                            <StackLayout>
-
-                                <Frame
-                                    Margin="0,0,10,0"
-                                    BackgroundColor="Gray"
-                                    CornerRadius="20"
-                                    HasShadow="True"
-                                    HeightRequest="180">
-
-                                    <StackLayout Orientation="Vertical" Spacing="5">
-
-                                        <Image
-                                            HeightRequest="80"
-                                            HorizontalOptions="CenterAndExpand"
-                                            Source="user"
-                                            WidthRequest="80" />
-
-                                        <Label
-                                            FontAttributes="Bold"
-                                            FontSize="18"
-                                            HorizontalOptions="CenterAndExpand"
-                                            Text="Alamgeer Ashraf"
-                                            TextColor="White" />
-
-                                        <Label
-                                            FontAttributes="Bold"
-                                            FontSize="16"
-                                            HorizontalOptions="CenterAndExpand"
-                                            Text="Xamarin Forms Developer"
-                                            TextColor="White" />
-
-                                    </StackLayout>
-                                </Frame>
-
-                            </StackLayout>
-                        </SwipeItemView>
-                    </SwipeItems>
-                </SwipeView.LeftItems>
-
-                <SwipeView.Content>
-
-
-                    <StackLayout
-                        BackgroundColor="White"
-                        HeightRequest="200"
-                        Orientation="Horizontal">
-
-                        <Image
-                            HeightRequest="60"
-                            HorizontalOptions="Start"
-                            Source="right_arrow.png"
-                            VerticalOptions="CenterAndExpand" />
-
-                        <Label
-                            FontSize="18"
-                            Text="Swipe to see user detail."
-                            VerticalOptions="CenterAndExpand" />
-
-                    </StackLayout>
-
-                </SwipeView.Content>
-
-            </SwipeView>-->
-
-
         </StackLayout>
 
-
-
-
-
-        <!--</ScrollView>-->
     </ContentPage.Content>
 </ContentPage>

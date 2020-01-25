@@ -18,37 +18,37 @@
                 <Image
                     Aspect="AspectFit"
                     IsAnimationPlaying="True"
-                    Source="gif1" />
+                    Source="gif1.gif" />
 
                 <Image
                     Aspect="AspectFit"
                     IsAnimationPlaying="True"
-                    Source="gif2" />
+                    Source="gif2.gif" />
 
                 <Image
                     Aspect="AspectFit"
                     IsAnimationPlaying="True"
-                    Source="gif3" />
+                    Source="gif3.gif" />
 
                 <Image
                     Aspect="AspectFit"
                     IsAnimationPlaying="True"
-                    Source="gif4" />
+                    Source="gif4.gif" />
 
                 <Image
                     Aspect="AspectFit"
                     IsAnimationPlaying="True"
-                    Source="gif5" />
+                    Source="gif5.gif" />
 
                 <Image
                     Aspect="AspectFit"
                     IsAnimationPlaying="True"
-                    Source="gif6" />
+                    Source="gif6.gif" />
 
                 <Image
                     Aspect="AspectFit"
                     IsAnimationPlaying="True"
-                    Source="gif7" />
+                    Source="gif7.gif" />
 
             </StackLayout>
 

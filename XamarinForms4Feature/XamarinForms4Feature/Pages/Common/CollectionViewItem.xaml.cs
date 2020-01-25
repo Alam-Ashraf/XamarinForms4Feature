@@ -23,6 +23,8 @@ namespace XamarinForms4Feature.Pages.Common
             InitializeComponent();
 
             _scale = FrameContainer.Scale;
+
+            Task.Delay(2000).ContinueWith(t => AnimateItem());
         }
 
         private async void OnImageClick(object sender, EventArgs e)
@@ -42,13 +44,6 @@ namespace XamarinForms4Feature.Pages.Common
         private async void OnItemClick(object sender, EventArgs e)
         {
             await (App.Current as App).ClickEventAnimation(sender as View);
-        }
-
-        protected override void OnChildAdded(Element child)
-        {
-            base.OnChildAdded(child);
-
-            Task.Delay(2000).ContinueWith(t => AnimateItem());
         }
 
         private async void AnimateItem()
