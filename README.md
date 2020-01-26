@@ -15,7 +15,7 @@
 
 ![CollectionView_1](https://user-images.githubusercontent.com/48187633/73124194-866f5200-3fbe-11ea-8a1b-c19fd34dbca2.jpg)
 
-![CollectionView_2](https://user-images.githubusercontent.com/48187633/73124254-30e77500-3fbf-11ea-95b5-06a589bd98d9.jpg)
+![CollectionView_3](https://user-images.githubusercontent.com/48187633/73131631-c6711c00-4034-11ea-833f-194059707a7c.jpg)
 
 
 # SwipeView
