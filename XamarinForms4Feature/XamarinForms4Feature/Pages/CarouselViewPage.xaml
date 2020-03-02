@@ -151,6 +151,7 @@
                     x:Name="carouselView1"
                     HeightRequest="220"
                     HorizontalOptions="FillAndExpand"
+                    IndicatorView="IV1"
                     ItemsSource="{Binding ImageList1}"
                     PeekAreaInsets="0">
 
@@ -218,9 +219,9 @@
                 </CarouselView>
 
                 <IndicatorView
+                    x:Name="IV1"
                     HorizontalOptions="Center"
                     IndicatorColor="LightGray"
-                    ItemsSourceBy="carouselView1"
                     SelectedIndicatorColor="DarkGray" />
 
 
@@ -231,6 +232,7 @@
                     x:Name="carouselView2"
                     HeightRequest="220"
                     HorizontalOptions="FillAndExpand"
+                    IndicatorView="IV2"
                     ItemsSource="{Binding ImageList2}"
                     PeekAreaInsets="30">
 
@@ -243,10 +245,10 @@
                 </CarouselView>
 
                 <IndicatorView
+                    x:Name="IV2"
                     HorizontalOptions="Center"
                     IndicatorColor="LightGray"
                     IndicatorsShape="Square"
-                    ItemsSourceBy="carouselView2"
                     SelectedIndicatorColor="{StaticResource ColorPrimary}" />
 
 
@@ -257,6 +259,7 @@
                     x:Name="carouselView3"
                     HeightRequest="220"
                     HorizontalOptions="FillAndExpand"
+                    IndicatorView="IV3"
                     ItemsSource="{Binding ImageList3}">
 
                     <CarouselView.ItemTemplate>
@@ -268,19 +271,20 @@
                 </CarouselView>
 
                 <IndicatorView
+                    x:Name="IV3"
                     HorizontalOptions="Center"
                     IndicatorColor="LightGray"
-                    ItemsSourceBy="carouselView3"
                     MaximumVisible="5"
                     SelectedIndicatorColor="{StaticResource ColorBlack}" />
 
-                <!--  Carousel 6th  -->
+                <!--  Carousel 4th  -->
                 <Label Text="Carousel with Animation" />
 
                 <CarouselView
                     x:Name="carouselView6"
                     HeightRequest="220"
                     HorizontalOptions="FillAndExpand"
+                    IndicatorView="IV4"
                     ItemsSource="{Binding ImageList6}">
 
                     <CarouselView.ItemTemplate>
@@ -292,21 +296,22 @@
                 </CarouselView>
 
                 <IndicatorView
+                    x:Name="IV4"
                     HorizontalOptions="Center"
                     IndicatorColor="LightGray"
-                    ItemsSourceBy="carouselView6"
                     MaximumVisible="5"
                     SelectedIndicatorColor="{StaticResource ColorPrimary}" />
 
 
 
-                <!--  Carousel 4th  -->
+                <!--  Carousel 5th  -->
                 <Label Text="Carousel with Vertical Orientation" />
 
                 <CarouselView
                     x:Name="carouselView4"
                     HeightRequest="280"
                     HorizontalOptions="FillAndExpand"
+                    IndicatorView="IV5"
                     ItemsSource="{Binding ImageList4}"
                     PeekAreaInsets="30">
 
@@ -326,20 +331,21 @@
                 </CarouselView>
 
                 <IndicatorView
+                    x:Name="IV5"
                     HorizontalOptions="Center"
                     IndicatorColor="LightGray"
                     IndicatorsShape="Square"
-                    ItemsSourceBy="carouselView4"
                     SelectedIndicatorColor="Red" />
 
 
-                <!--  Carousel 5th  -->
+                <!--  Carousel 6th  -->
                 <Label Text="Carousel with TemplateSelector" />
 
                 <CarouselView
                     x:Name="carouselView5"
                     HeightRequest="220"
                     HorizontalOptions="FillAndExpand"
+                    IndicatorView="IV6"
                     ItemTemplate="{StaticResource TemplateSelector}"
                     ItemsSource="{Binding ImageList5}"
                     PeekAreaInsets="30">
@@ -383,10 +389,10 @@
                 </CarouselView>
 
                 <IndicatorView
+                    x:Name="IV6"
                     HorizontalOptions="Center"
                     IndicatorColor="LightGray"
                     IndicatorsShape="Square"
-                    ItemsSourceBy="carouselView5"
                     SelectedIndicatorColor="Red" />
 
             </StackLayout>
