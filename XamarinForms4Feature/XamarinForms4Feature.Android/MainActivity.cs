@@ -22,11 +22,12 @@ namespace XamarinForms4Feature.Droid
             // Initialized Rg.Plugins
             Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
 
-            Xamarin.Forms.Forms.SetFlags(new string[] { "CarouselView_Experimental", "SwipeView_Experimental", "IndicatorView_Experimental" });
-
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
 
+            Xamarin.Forms.Forms.SetFlags(new string[] { "CarouselView_Experimental", "SwipeView_Experimental", "IndicatorView_Experimental" });
+
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
             LoadApplication(new App());
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

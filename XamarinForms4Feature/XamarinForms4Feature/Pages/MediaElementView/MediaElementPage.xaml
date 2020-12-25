@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms4Feature.Pages.MediaElementView.MediaElementPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Media Element"
+    mc:Ignorable="d">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style TargetType="Frame">
+                <Setter Property="CornerRadius" Value="0" />
+                <Setter Property="HeightRequest" Value="100" />
+                <Setter Property="HasShadow" Value="True" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="16" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <ContentPage.Content>
+
+        <StackLayout>
+
+            <Grid Margin="10">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!--  RemoteMedia  -->
+                <Frame
+                    x:Name="FrameRemoteMedia"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    BackgroundColor="{StaticResource ColorPrimary}"
+                    HeightRequest="100">
+
+                    <Label Text="Remote Media" />
+
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnRemoteMediaClick" />
+                    </Frame.GestureRecognizers>
+
+                </Frame>
+
+                <!--  LocalMedia  -->
+                <Frame
+                    x:Name="FrameLocalMedia"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    BackgroundColor="{StaticResource ColorPrimary}">
+
+                    <Label Text="Local Media" />
+
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnLocalMediaClick" />
+                    </Frame.GestureRecognizers>
+
+                </Frame>
+
+                <!--  From Local or Temp  -->
+                <Frame
+                    x:Name="FrameLocalOrTemp"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    BackgroundColor="{StaticResource ColorPrimary}">
+
+                    <Label Text="Local Media" />
+
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnLocalOrTempMediaClick" />
+                    </Frame.GestureRecognizers>
+
+                </Frame>
+
+
+            </Grid>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

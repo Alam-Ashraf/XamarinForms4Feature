@@ -6,6 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using XamarinForms4Feature.Pages;
+using XamarinForms4Feature.Pages.CarouselsView;
+using XamarinForms4Feature.Pages.CollectionsView;
+using XamarinForms4Feature.Pages.GifView;
+using XamarinForms4Feature.Pages.MediaElementView;
+using XamarinForms4Feature.Pages.SwipeView;
 
 namespace XamarinForms4Feature
 {
@@ -47,6 +52,11 @@ namespace XamarinForms4Feature
             await Navigation.PushAsync(new GifPage());
         }
 
+        private async void OnMediaElementClick(object sender, EventArgs e)
+        {
+            await (App.Current as App).ClickEventAnimation(FrameMediaElement);
 
+            await Navigation.PushAsync(new MediaElementPage());
+        }
     }
 }

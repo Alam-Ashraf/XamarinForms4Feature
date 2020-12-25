@@ -12,37 +12,37 @@
 
   <ItemGroup>
     <PackageReference Include="Rg.Plugins.Popup" Version="1.2.0.223" />
-    <PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.495" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.0" />
 
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Pages\CollectionViewMenuPage.xaml.cs">
+    <Compile Update="Pages\CollectionsView\CollectionViewMenuPage.xaml.cs">
       <DependentUpon>CollectionViewMenuPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Pages\CarouselViewPage.xaml">
+    <EmbeddedResource Update="Pages\CarouselsView\CarouselViewPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\CollectionViewContextMenuPage.xaml">
+    <EmbeddedResource Update="Pages\CollectionsView\CollectionViewContextMenuPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\CollectionViewGridPage.xaml">
+    <EmbeddedResource Update="Pages\CollectionsView\CollectionViewGridPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\CollectionViewGroupPage.xaml">
+    <EmbeddedResource Update="Pages\CollectionsView\CollectionViewGroupPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\CollectionViewHorizontalPage.xaml">
+    <EmbeddedResource Update="Pages\CollectionsView\CollectionViewHorizontalPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\CollectionViewPage.xaml">
+    <EmbeddedResource Update="Pages\CollectionsView\CollectionViewPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\CollectionViewMenuPage.xaml">
+    <EmbeddedResource Update="Pages\CollectionsView\CollectionViewMenuPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\Common\CarouselItemView.xaml">
@@ -63,13 +63,25 @@
     <EmbeddedResource Update="Pages\Common\CollectionViewItem3.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\GifPage.xaml">
+    <EmbeddedResource Update="Pages\GifView\GifPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\MediaElementView\LocalMediaPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\MediaElementView\MediaElementPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\MediaElementView\MediaElementPageFromFileOrTemp.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\MediaElementView\RemoteMediaPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\Popups\ShowImagePopup.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\SwipeViewPage.xaml">
+    <EmbeddedResource Update="Pages\SwipeView\SwipeViewPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

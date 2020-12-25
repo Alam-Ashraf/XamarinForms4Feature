@@ -36,6 +36,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
+            <!--  CarouselView  -->
             <Frame
                 x:Name="FrameCarousel"
                 Grid.Row="0"
@@ -51,6 +52,7 @@
 
             </Frame>
 
+            <!--  CollectionView  -->
             <Frame
                 x:Name="FrameCollection"
                 Grid.Row="0"
@@ -65,6 +67,7 @@
 
             </Frame>
 
+            <!--  SwipeView  -->
             <Frame
                 x:Name="FrameSwipe"
                 Grid.Row="1"
@@ -79,6 +82,7 @@
 
             </Frame>
 
+            <!--  Image With Gif  -->
             <Frame
                 x:Name="FrameImageWithGif"
                 Grid.Row="1"
@@ -89,6 +93,21 @@
 
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnImageWithGifClick" />
+                </Frame.GestureRecognizers>
+
+            </Frame>
+
+            <!--  Media Element  -->
+            <Frame
+                x:Name="FrameMediaElement"
+                Grid.Row="2"
+                Grid.Column="0"
+                BackgroundColor="{StaticResource ColorPrimary}">
+
+                <Label Text="Media Element" />
+
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnMediaElementClick" />
                 </Frame.GestureRecognizers>
 
             </Frame>

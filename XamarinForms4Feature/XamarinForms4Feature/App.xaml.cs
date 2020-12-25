@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -9,6 +10,13 @@ namespace XamarinForms4Feature
     {
         public App()
         {
+            Xamarin.Forms.Device.SetFlags(new List<string>() {
+                                            "StateTriggers_Experimental",
+                                             "IndicatorView_Experimental",
+                                             "CarouselView_Experimental",
+                                             "MediaElement_Experimental"
+                                         });
+
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());

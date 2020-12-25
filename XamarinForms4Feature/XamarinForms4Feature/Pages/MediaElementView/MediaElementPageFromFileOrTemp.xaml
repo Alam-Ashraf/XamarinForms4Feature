@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms4Feature.Pages.MediaElementView.MediaElementPageFromFileOrTemp"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Video From Local/Temp"
+    mc:Ignorable="d">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <!--
+                This page is configured to play a video in your app data directory.
+                To play a video in your temp directory, comment out the first MediaElement
+                and uncomment the second MediaElement. In addition, modify the FileAccess
+                class to store the video file in the temp folder.
+            -->
+
+            <MediaElement
+                HorizontalOptions="FillAndExpand"
+                ShowsPlaybackControls="True"
+                Source="ms-appdata:///local/XamarinVideo.mp4"
+                VerticalOptions="FillAndExpand" />
+
+            <!--<MediaElement
+                HorizontalOptions="FillAndExpand"
+                ShowsPlaybackControls="True"
+                Source="ms-appdata:///temp/XamarinVideo.mp4"
+                VerticalOptions="FillAndExpand" />-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
