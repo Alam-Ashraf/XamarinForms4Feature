@@ -22,8 +22,6 @@ namespace XamarinForms4Feature.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            Xamarin.Forms.Forms.SetFlags(new string[] { "CarouselView_Experimental", "SwipeView_Experimental", "IndicatorView_Experimental" });
-
             global::Xamarin.Forms.Forms.Init();
 
             // Initialized Rg.Plugins

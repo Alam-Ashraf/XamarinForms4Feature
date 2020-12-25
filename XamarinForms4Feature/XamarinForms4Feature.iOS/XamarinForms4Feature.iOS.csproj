@@ -123,15 +123,15 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Rg.Plugins.Popup">
-      <Version>1.2.0.223</Version>
+      <Version>2.0.0.9</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.5.0.495" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1821" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.0" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\XamarinForms4Feature\XamarinForms4Feature.csproj">
-      <Project>{701205E9-D01D-47F0-8184-59BCB6F6A8BB}</Project>
+      <Project>{DEB8798F-8BE2-43FC-BC4F-A87781BFA9A8}</Project>
       <Name>XamarinForms4Feature</Name>
     </ProjectReference>
   </ItemGroup>

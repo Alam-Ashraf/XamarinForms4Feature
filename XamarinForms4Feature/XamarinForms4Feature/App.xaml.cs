@@ -14,7 +14,8 @@ namespace XamarinForms4Feature
                                             "StateTriggers_Experimental",
                                              "IndicatorView_Experimental",
                                              "CarouselView_Experimental",
-                                             "MediaElement_Experimental"
+                                             "MediaElement_Experimental",
+                                             "SwipeView_Experimental"
                                          });
 
             InitializeComponent();

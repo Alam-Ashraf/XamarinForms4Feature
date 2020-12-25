@@ -62,28 +62,26 @@
                     </SwipeItems>
                 </SwipeView.TopItems>
 
-                <SwipeView.Content>
 
-                    <StackLayout
-                        BackgroundColor="White"
-                        HeightRequest="200"
-                        Orientation="Vertical">
+                <StackLayout
+                    BackgroundColor="White"
+                    HeightRequest="200"
+                    Orientation="Vertical">
 
-                        <Image
-                            HeightRequest="60"
-                            HorizontalOptions="CenterAndExpand"
-                            Source="down_arrow.png"
-                            VerticalOptions="CenterAndExpand" />
+                    <Image
+                        HeightRequest="60"
+                        HorizontalOptions="CenterAndExpand"
+                        Source="down_arrow.png"
+                        VerticalOptions="CenterAndExpand" />
 
-                        <Label
-                            FontSize="18"
-                            HorizontalOptions="CenterAndExpand"
-                            Text="Swipe to see user detail."
-                            VerticalOptions="CenterAndExpand" />
+                    <Label
+                        FontSize="18"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Swipe to see user detail."
+                        VerticalOptions="CenterAndExpand" />
 
-                    </StackLayout>
+                </StackLayout>
 
-                </SwipeView.Content>
 
             </SwipeView>
 

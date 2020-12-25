@@ -55,6 +55,11 @@
                 <Setter Property="BarTextColor" Value="{StaticResource ColorWhite}" />
             </Style>
 
+            <Style TargetType="IndicatorView">
+                <!--  Doesn't change anything!  -->
+                <Setter Property="Visual" Value="Material" />
+            </Style>
+
         </ResourceDictionary>
 
     </Application.Resources>
