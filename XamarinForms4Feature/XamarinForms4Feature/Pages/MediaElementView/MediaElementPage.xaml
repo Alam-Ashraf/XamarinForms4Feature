@@ -20,6 +20,7 @@
             <Style TargetType="Label">
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
                 <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="FontSize" Value="16" />
             </Style>
@@ -77,10 +78,42 @@
                     Grid.Column="0"
                     BackgroundColor="{StaticResource ColorPrimary}">
 
-                    <Label Text="Local Media" />
+                    <Label Text="Local/Temp Media" />
 
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnLocalOrTempMediaClick" />
+                    </Frame.GestureRecognizers>
+
+                </Frame>
+
+
+                <!--  From Device Library  -->
+                <Frame
+                    x:Name="FrameDeviceLibrary"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    BackgroundColor="{StaticResource ColorPrimary}">
+
+                    <Label Text="Device Library Media" />
+
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnDeviceLibraryMediaClick" />
+                    </Frame.GestureRecognizers>
+
+                </Frame>
+
+
+                <!--  From Device Library  -->
+                <Frame
+                    x:Name="FrameCustomControllingLibrary"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    BackgroundColor="{StaticResource ColorPrimary}">
+
+                    <Label Text="Custom Controlling Media" />
+
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCustomControllingMediaClick" />
                     </Frame.GestureRecognizers>
 
                 </Frame>

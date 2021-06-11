@@ -16,7 +16,7 @@
                 AutoPlay="True"
                 HorizontalOptions="FillAndExpand"
                 ShowsPlaybackControls="True"
-                Source="ms-appx:///video.mp4"
+                Source="ms-appx:///video1.mp4"
                 VerticalOptions="FillAndExpand" />
 
         </StackLayout>

@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="XamarinForms4Feature.Pages.MediaElementView.CustomControlingMediaPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:customSlider="clr-namespace:XamarinForms4Feature.Pages.Common"
+    Title="Custom Controlling Media">
+    <ContentPage.Content>
+
+        <Grid RowDefinitions="*,Auto" RowSpacing="0">
+
+            <Grid Grid.Row="0">
+
+                <MediaElement
+                    x:Name="Media"
+                    AutoPlay="False"
+                    BackgroundColor="Black"
+                    MediaEnded="Media_MediaEnded"
+                    ShowsPlaybackControls="False"
+                    Source="ms-appx:///video.mp4"
+                    VerticalOptions="FillAndExpand" />
+
+                <StackLayout
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding MediaCommand}" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <ImageButton
+                    BackgroundColor="Transparent"
+                    Command="{Binding PlayPauseComand}"
+                    HeightRequest="65"
+                    HorizontalOptions="CenterAndExpand"
+                    IsVisible="{Binding IsShowing}"
+                    Source="play.jpg"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="65">
+
+                    <ImageButton.Triggers>
+
+                        <!--  Show Pause Icon  -->
+                        <DataTrigger
+                            Binding="{Binding IsPlaying}"
+                            TargetType="ImageButton"
+                            Value="True">
+
+                            <Setter Property="Source" Value="pause.png" />
+
+                        </DataTrigger>
+
+                        <!--  Show Play Icon  -->
+                        <DataTrigger
+                            Binding="{Binding IsPlaying}"
+                            TargetType="ImageButton"
+                            Value="False">
+
+                            <Setter Property="Source" Value="play.jpg" />
+
+                        </DataTrigger>
+
+                    </ImageButton.Triggers>
+
+                </ImageButton>
+
+
+            </Grid>
+
+            <StackLayout
+                Grid.Row="1"
+                Padding="5,0,5,15"
+                BackgroundColor="{StaticResource ColorPrimary}"
+                VerticalOptions="EndAndExpand">
+
+                <Grid Padding="0,5,0,0" ColumnDefinitions="*,Auto,*">
+
+
+                    <Label
+                        Grid.Column="0"
+                        HorizontalOptions="CenterAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding CurrentPos, StringFormat='{0:hh\\:mm\\:ss}'}"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+
+
+                    <ImageButton
+                        Grid.Column="1"
+                        BackgroundColor="Transparent"
+                        Command="{Binding StopComand}"
+                        HeightRequest="55"
+                        HorizontalOptions="CenterAndExpand"
+                        Source="stop.png"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="55" />
+
+
+
+                    <Label
+                        Grid.Column="2"
+                        HorizontalOptions="CenterAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding TotalDuration, StringFormat='{0:hh\\:mm\\:ss}'}"
+                        TextColor="Black"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+
+                </Grid>
+
+
+                <!--<customSlider:PositionSlider
+                    x:Name="positionSlider"
+                    ValueChanged="OnPositionSliderValueChanged"
+                    Duration="{Binding Duration}">
+
+                    <customSlider:PositionSlider.Triggers>
+                        <DataTrigger
+                            Binding="{Binding CurrentState}"
+                            TargetType="customSlider:PositionSlider"
+                            Value="{x:Static MediaElementState.Buffering}">
+                            <Setter Property="IsEnabled" Value="False" />
+                        </DataTrigger>
+                    </customSlider:PositionSlider.Triggers>
+
+                </customSlider:PositionSlider>-->
+
+
+                <Slider
+                    x:Name="positionSlider"
+                    MaximumTrackColor="White"
+                    MinimumTrackColor="Black"
+                    ThumbColor="Black"
+                    Value="{Binding CurrentPosSlider, Mode=TwoWay}" />
+
+
+            </StackLayout>
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

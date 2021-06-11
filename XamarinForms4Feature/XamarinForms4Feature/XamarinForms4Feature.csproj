@@ -15,6 +15,7 @@
     <PackageReference Include="Xamarin.Forms" Version="4.8.0.1821" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.0" />
 
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.8.0.1821" />
   </ItemGroup>
 
   <ItemGroup>
@@ -84,5 +85,8 @@
     <EmbeddedResource Update="Pages\SwipeView\SwipeViewPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DependencyServices\" />
   </ItemGroup>
 </Project>

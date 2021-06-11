@@ -5,11 +5,15 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="Video From Local/Temp"
+    Title="Video From Local/Temp Folder"
     mc:Ignorable="d">
 
     <ContentPage.Content>
-        <StackLayout>
+        <Grid
+            Margin="0,10,0,0"
+            RowDefinitions="*,*"
+            RowSpacing="20"
+            VerticalOptions="FillAndExpand">
             <!--
                 This page is configured to play a video in your app data directory.
                 To play a video in your temp directory, comment out the first MediaElement
@@ -17,17 +21,37 @@
                 class to store the video file in the temp folder.
             -->
 
-            <MediaElement
-                HorizontalOptions="FillAndExpand"
-                ShowsPlaybackControls="True"
-                Source="ms-appdata:///local/XamarinVideo.mp4"
-                VerticalOptions="FillAndExpand" />
+            <StackLayout Grid.Row="0" VerticalOptions="StartAndExpand">
 
-            <!--<MediaElement
-                HorizontalOptions="FillAndExpand"
-                ShowsPlaybackControls="True"
-                Source="ms-appdata:///temp/XamarinVideo.mp4"
-                VerticalOptions="FillAndExpand" />-->
-        </StackLayout>
+                <Label HorizontalTextAlignment="Center" Text="Video Playing from local folder" />
+
+                <!--  Playing Video From AppData folder  -->
+                <MediaElement
+                    HeightRequest="250"
+                    HorizontalOptions="FillAndExpand"
+                    ShowsPlaybackControls="True"
+                    Source="ms-appdata:///local/video_stored_in_local1.mp4"
+                    VerticalOptions="CenterAndExpand" />
+
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" VerticalOptions="StartAndExpand">
+
+                <Label HorizontalTextAlignment="Center" Text="Video Playing from temp folder" />
+
+                <!--  Playing Video From Temp folder  -->
+                <MediaElement
+                    HeightRequest="250"
+                    HorizontalOptions="FillAndExpand"
+                    ShowsPlaybackControls="True"
+                    Source="ms-appdata:///temp/video_stored_in_temp1.mp4"
+                    VerticalOptions="CenterAndExpand" />
+
+            </StackLayout>
+
+
+
+
+        </Grid>
     </ContentPage.Content>
-</ContentPage>
+</ContentPage> 

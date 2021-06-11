@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -21,9 +23,11 @@ namespace XamarinForms4Feature
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
+
+
         }
 
-        protected override void OnStart()
+        protected async override void OnStart()
         {
         }
 
@@ -34,7 +38,6 @@ namespace XamarinForms4Feature
         protected override void OnResume()
         {
         }
-
 
         public async Task ClickEventAnimation(View view)
         {
